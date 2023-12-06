@@ -1,0 +1,238 @@
+{
+	"event": "2023",
+	"members": {
+		"992507": {
+			"last_star_ts": 1701667650,
+			"stars": 8,
+			"global_score": 0,
+			"name": null,
+			"completion_day_level": {
+				"2": {
+					"1": { "get_star_ts": 1701493698, "star_index": 267540 },
+					"2": { "get_star_ts": 1701493901, "star_index": 269204 }
+				},
+				"1": {
+					"2": { "get_star_ts": 1701408961, "star_index": 12904 },
+					"1": { "get_star_ts": 1701407100, "star_index": 0 }
+				},
+				"3": {
+					"1": { "get_star_ts": 1701621574, "star_index": 666314 },
+					"2": { "star_index": 667570, "get_star_ts": 1701621945 }
+				},
+				"4": {
+					"2": { "get_star_ts": 1701667650, "star_index": 784091 },
+					"1": { "get_star_ts": 1701666715, "star_index": 774668 }
+				}
+			},
+			"id": 992507,
+			"local_score": 73
+		},
+		"1178240": {
+			"stars": 7,
+			"last_star_ts": 1701667132,
+			"global_score": 0,
+			"completion_day_level": {
+				"3": {
+					"1": { "star_index": 545801, "get_star_ts": 1701582978 },
+					"2": { "star_index": 548295, "get_star_ts": 1701583627 }
+				},
+				"2": {
+					"2": { "get_star_ts": 1701494815, "star_index": 277989 },
+					"1": { "get_star_ts": 1701494525, "star_index": 275433 }
+				},
+				"1": {
+					"2": { "star_index": 16821, "get_star_ts": 1701409942 },
+					"1": { "get_star_ts": 1701407107, "star_index": 96 }
+				},
+				"4": { "1": { "get_star_ts": 1701667132, "star_index": 779356 } }
+			},
+			"name": "Steve Jibson",
+			"id": 1178240,
+			"local_score": 65
+		},
+		"513294": {
+			"global_score": 0,
+			"last_star_ts": 1701666868,
+			"stars": 8,
+			"local_score": 57,
+			"id": 513294,
+			"name": "Shayne Holmes",
+			"completion_day_level": {
+				"3": {
+					"1": { "get_star_ts": 1701582099, "star_index": 542090 },
+					"2": { "get_star_ts": 1701582746, "star_index": 544842 }
+				},
+				"2": {
+					"2": { "star_index": 429979, "get_star_ts": 1701534649 },
+					"1": { "get_star_ts": 1701534492, "star_index": 429410 }
+				},
+				"1": {
+					"2": { "star_index": 302368, "get_star_ts": 1701500155 },
+					"1": { "get_star_ts": 1701484291, "star_index": 256053 }
+				},
+				"4": {
+					"1": { "get_star_ts": 1701666325, "star_index": 770543 },
+					"2": { "star_index": 776491, "get_star_ts": 1701666868 }
+				}
+			}
+		},
+		"2460755": {
+			"completion_day_level": {},
+			"name": "Ernesto Hernandez Antonio",
+			"local_score": 0,
+			"id": 2460755,
+			"stars": 0,
+			"last_star_ts": 0,
+			"global_score": 0
+		},
+		"1478800": {
+			"last_star_ts": 1701535253,
+			"stars": 4,
+			"global_score": 0,
+			"completion_day_level": {
+				"1": {
+					"1": { "get_star_ts": 1701407332, "star_index": 2519 },
+					"2": { "get_star_ts": 1701409277, "star_index": 14239 }
+				},
+				"2": {
+					"1": { "star_index": 431439, "get_star_ts": 1701535037 },
+					"2": { "star_index": 432231, "get_star_ts": 1701535253 }
+				}
+			},
+			"name": "Nathan Craddock",
+			"local_score": 26,
+			"id": 1478800
+		},
+		"3340256": {
+			"completion_day_level": {
+				"1": {
+					"2": { "star_index": 64746, "get_star_ts": 1701424070 },
+					"1": { "get_star_ts": 1701415952, "star_index": 34764 }
+				},
+				"2": {
+					"1": { "get_star_ts": 1701509408, "star_index": 333173 },
+					"2": { "get_star_ts": 1701509879, "star_index": 335072 }
+				},
+				"3": {
+					"2": { "get_star_ts": 1701604512, "star_index": 610480 },
+					"1": { "star_index": 583126, "get_star_ts": 1701596377 }
+				}
+			},
+			"name": "Jacek Ziembla",
+			"local_score": 40,
+			"id": 3340256,
+			"last_star_ts": 1701604512,
+			"stars": 6,
+			"global_score": 0
+		},
+		"809337": {
+			"global_score": 0,
+			"last_star_ts": 1701624174,
+			"stars": 6,
+			"local_score": 23,
+			"id": 809337,
+			"name": "Keith Corbalis",
+			"completion_day_level": {
+				"3": {
+					"1": { "star_index": 656981, "get_star_ts": 1701618752 },
+					"2": { "get_star_ts": 1701624174, "star_index": 675049 }
+				},
+				"1": {
+					"1": { "get_star_ts": 1701445100, "star_index": 141814 },
+					"2": { "star_index": 152386, "get_star_ts": 1701447699 }
+				},
+				"2": {
+					"2": { "get_star_ts": 1701543778, "star_index": 460891 },
+					"1": { "star_index": 458580, "get_star_ts": 1701543021 }
+				}
+			}
+		},
+		"500916": {
+			"id": 500916,
+			"local_score": 25,
+			"name": "qguernsey",
+			"completion_day_level": {
+				"3": { "1": { "get_star_ts": 1701665126, "star_index": 768458 } },
+				"2": {
+					"2": { "star_index": 315651, "get_star_ts": 1701504454 },
+					"1": { "get_star_ts": 1701503841, "star_index": 313689 }
+				},
+				"1": {
+					"2": { "get_star_ts": 1701474181, "star_index": 240509 },
+					"1": { "star_index": 223888, "get_star_ts": 1701468114 }
+				}
+			},
+			"global_score": 0,
+			"last_star_ts": 1701665126,
+			"stars": 5
+		},
+		"80292": {
+			"name": "kevinyou",
+			"completion_day_level": {
+				"3": {
+					"1": { "star_index": 570513, "get_star_ts": 1701591737 },
+					"2": { "star_index": 574360, "get_star_ts": 1701593218 }
+				},
+				"2": {
+					"1": { "get_star_ts": 1701587238, "star_index": 559577 },
+					"2": { "get_star_ts": 1701587823, "star_index": 561097 }
+				},
+				"1": {
+					"2": { "get_star_ts": 1701410825, "star_index": 19857 },
+					"1": { "get_star_ts": 1701408035, "star_index": 8115 }
+				}
+			},
+			"id": 80292,
+			"local_score": 34,
+			"stars": 6,
+			"last_star_ts": 1701593218,
+			"global_score": 0
+		},
+		"1175455": {
+			"last_star_ts": 1701666865,
+			"stars": 7,
+			"global_score": 0,
+			"completion_day_level": {
+				"4": { "1": { "star_index": 776456, "get_star_ts": 1701666865 } },
+				"2": {
+					"2": { "get_star_ts": 1701502159, "star_index": 308379 },
+					"1": { "star_index": 307013, "get_star_ts": 1701501670 }
+				},
+				"1": {
+					"2": { "get_star_ts": 1701409956, "star_index": 16857 },
+					"1": { "star_index": 2386, "get_star_ts": 1701407317 }
+				},
+				"3": {
+					"2": { "star_index": 544726, "get_star_ts": 1701582717 },
+					"1": { "star_index": 543877, "get_star_ts": 1701582504 }
+				}
+			},
+			"name": "Brandon Twede",
+			"local_score": 65,
+			"id": 1175455
+		},
+		"16126": {
+			"id": 16126,
+			"local_score": 34,
+			"name": "Wesley Porter",
+			"completion_day_level": {
+				"1": {
+					"1": { "star_index": 100940, "get_star_ts": 1701434352 },
+					"2": { "star_index": 107420, "get_star_ts": 1701436284 }
+				},
+				"2": {
+					"2": { "star_index": 389565, "get_star_ts": 1701523608 },
+					"1": { "star_index": 387852, "get_star_ts": 1701523153 }
+				},
+				"3": {
+					"1": { "star_index": 630491, "get_star_ts": 1701610601 },
+					"2": { "star_index": 634131, "get_star_ts": 1701611707 }
+				}
+			},
+			"global_score": 0,
+			"last_star_ts": 1701611707,
+			"stars": 6
+		}
+	},
+	"owner_id": 16126
+}
