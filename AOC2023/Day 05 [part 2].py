@@ -1,7 +1,7 @@
 import os
 
-if "Files/Random Codes/AOC2023" not in os.getcwd():
-    os.chdir("Files/Random Codes/AOC2023")
+if "AOC2023" not in os.getcwd():
+    os.chdir("AOC2023")
 
 print(os.getcwd(), "\n\n...")
 

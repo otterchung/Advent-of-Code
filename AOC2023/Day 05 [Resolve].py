@@ -1,7 +1,7 @@
 import os
 
-if "Files/Random Codes/AOC2023" not in os.getcwd():
-    os.chdir("Files/Random Codes/AOC2023")
+if "AOC2023" not in os.getcwd():
+    os.chdir("AOC2023")
 
 print(os.getcwd(), "\n\n...")
 
@@ -10,10 +10,10 @@ data = "actual"
 
 if "sample" == data:
     print(">>> YOU ARE USING SAMPLE DATA ")
-    theFileName = "6-sample.txt"
+    theFileName = "5-sample.txt"
 else:
     print(">>> YOU ARE USING ACTUAL DATA ")
-    theFileName = "6-input.txt"
+    theFileName = "5-input.txt"
 print("...\n\n")
 
 theInput = open(theFileName).read()
