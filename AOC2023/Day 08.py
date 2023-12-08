@@ -7,7 +7,7 @@ print(os.getcwd(), "\n\n...")
 
 data = "sample"
 data = "actual"
-part1 = False
+part1 = False #True
 
 if "sample" == data:
     print(">>> YOU ARE USING SAMPLE DATA ")
@@ -67,8 +67,14 @@ for node in startNodes:
 from math import lcm
 lcmValue = 1
 for p in paths:
-    #print(p[0],p[-1], len(instr), (len(p)-1), (len(p)-1)/len(instr), directions[p[-1]][1])
+    print(p[0],p[-1], len(instr), (len(p)-1), (len(p)-1)/len(instr), directions[p[-1]][1])
     # the answer would be the 4th column
     # the answer for part 2 is the LCM of all column 4s
+
+    # because each end node replaces its start node and restarts the cycle
+    # for example: 
+    #   the first startNode -> secondNode -> ... endNode -> secondNode
+    #   this takes 79 cycles of instructions (but uses the instructions in entirety)
+    # this is how we can rely on the LCM.
     lcmValue = lcm(lcmValue, len(p)-1)
 print("Answer:",lcmValue)
