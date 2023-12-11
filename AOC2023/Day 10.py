@@ -35,59 +35,16 @@ while i < len(lines):
     j = 0
     newMap.append([" "] * len(lines) * 2)
     newMap.append([" "] * len(lines) * 2)
-    #newMap.append([""] * len(lines) * 3)
 
     while j < len(lines[i]):
         if lines[i][j] == "S":
             start = i,j
-        
-        #if lines[i][j] == ".":
+
+        #! Setting the offset for expanded map tiles
         newMap[2*i+1][2*j+1] = "0"
         j += 1
 
     i += 1
-
-
-
-singleLine = "*" * len(lines[0])
-allLines = "\n".join([singleLine] * len(lines))
-
-def findFirstPoss(map, current, previous):
-
-    #! Part 2
-    x0, y0 = current[0] * 2, current[1] * 2
-    newMap[x0][y0] = "S"
-    newMap[x0+1][y0+1] = " "
-
-    poss = [(0,1),(0,-1),(1,0),(-1,0)]
-    pipes = "-7|JLSF"
-    i,j = current
-    for delta_x,delta_y in poss:
-        x,y = i + delta_x, j + delta_y
-        next = x,y
-
-        if x >= len(lines) or y >= len(lines[x]) or x < 0 or y < 0:
-            continue 
-
-        #print("hello", next, previous, x, y)
-        if next != previous and map[x][y] in pipes:
-            tile = map[x][y]
-
-            #! Part 2
-            x1, y1 = x * 2, y * 2
-            xhalf, yhalf = int(x0 + (x1-x0)/2), int(y0 + (y1-y0)/2)
-
-            if x1-x0 == 0:
-                newMapTile = "-"
-            else:
-                newMapTile = "|"
-            newMap[xhalf][yhalf] = newMapTile
-            #! ----
-
-            #print(next, previous, current, tile)
-            previous = current
-            return next, previous, tile
-    print('crap, start')
 
 def findNext(map, current, previous, tile):
     pipeDirection = {
@@ -100,13 +57,18 @@ def findNext(map, current, previous, tile):
         "F": [(1,0),(0,1)],
     }
 
-    poss = pipeDirection[tile]
+    if tile == "S":
+        poss = [(0,1),(0,-1),(1,0),(-1,0)]
+    else:
+        poss = pipeDirection[tile]
     i,j = current
 
     #! Part 2
     x0, y0 = current[0] * 2, current[1] * 2
     newMap[x0][y0] = tile
+    # Clearing the offset for expanded map spaces where there shouldn't be a tile
     newMap[x0+1][y0+1] = " "
+    
 
     for delta_x,delta_y in poss:
         x,y = i + delta_x, j + delta_y
@@ -117,7 +79,6 @@ def findNext(map, current, previous, tile):
         
         if next != previous:
             tile = map[x][y]
-
             #! Part 2
             x1, y1 = x * 2, y * 2
             xhalf, yhalf = int(x0 + (x1-x0)/2), int(y0 + (y1-y0)/2)
@@ -128,9 +89,6 @@ def findNext(map, current, previous, tile):
                 newMapTile = "|"
             newMap[xhalf][yhalf] = newMapTile
             #! ----
-
-            #allLines[x][y] = "#"
-            #print(next, previous, current, tile)
             previous = current
             return next, previous, tile
     print('crap')
@@ -141,44 +99,25 @@ length = 0
 current = start
 
 tile = 'S'
-next, previous, nextTile = findFirstPoss(lines, current, previous)
-
+next, previous, nextTile = findNext(lines, current, previous, tile)
 pathing = []
 pathing.append(current)
 
 while nextTile != 'S':
-    
-    # if length < 20:
-    #     print(tile, previous, next, nextTile)
-
     tile = nextTile
     current = next
     
     next, previous, nextTile = findNext(lines, current, previous, nextTile)
     pathing.append(current)
     
-    # Part 2
+    #! Part 2
     x0, y0 = previous 
     x1, y1 = next
-
-
-
-    #current = cur
-    #previous = prev
-
     length += 1
-    #print(tile, length)
-    #print(previous, current)
+
 pathing.append(next)
 
-
-
-    
-print('end',tile, previous, next, nextTile)
-
 print("P1 Answer: ",length/2)
-
-#p1 - 6812
 
 # Part 2 Logic (thanks Robin)
 isInside = 0
@@ -193,6 +132,8 @@ while i < len(newMap):
             newMap[i-1][j-1] = "0"
             if countFlats % 2 == 1:
                 isInside += 1
+
+                #! everything below is just visualizing cleanup
                 newMap[i-1][j-1] = "I"
             newMap[i][j] = " "
 
@@ -203,23 +144,20 @@ while i < len(newMap):
     i += 1
 print("P2 Answer:",isInside)
 
-#141
-#451
-#1391 too high
+# oldCount = 0
+# for line in lines:
+#     for x in line:
+#         if x == ".":
+#             oldCount += 1
 
-oldCount = 0
-for line in lines:
-    for x in line:
-        if x == ".":
-            oldCount += 1
+# newCount = 0
+# for line in newMap:
+#     for x in line:
+#         if x == "0":
+#             newCount+=1
 
-newCount = 0
-for line in newMap:
-    for x in line:
-        if x == "0":
-            newCount+=1
+# print(oldCount, newCount)
 
-print(oldCount, newCount)
-
-# for x in newMap:
-#     print(" ".join([y for y in x]))
+#! Output Visual
+# for line in newMap:
+#     print(" ".join([x for x in line]))

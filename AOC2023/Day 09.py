@@ -33,7 +33,7 @@ def getNextSequence(sequence):
         diff = sequence[i] - sequence[i - 1]
         newSequence.append(diff)
         i += 1
-    print(newSequence)
+    #print(newSequence)
     return newSequence
     
 
@@ -41,7 +41,7 @@ totals = []
 totals2 = []
 for line in lines:
     sequence = [[int(x) for x in line.split(" ")]]
-    print('new', sequence)
+    #print('new', sequence)
 
     while set(sequence[-1]) != set([0]):
         sequence.append(getNextSequence(sequence[-1]))
