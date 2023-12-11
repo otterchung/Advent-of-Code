@@ -33,8 +33,8 @@ newMap = []
 
 while i < len(lines):
     j = 0
-    newMap.append([""] * len(lines) * 2)
-    newMap.append([""] * len(lines) * 2)
+    newMap.append([" "] * len(lines) * 2)
+    newMap.append([" "] * len(lines) * 2)
     #newMap.append([""] * len(lines) * 3)
 
     while j < len(lines[i]):
@@ -42,7 +42,7 @@ while i < len(lines):
             start = i,j
         
         #if lines[i][j] == ".":
-        newMap[2*i+1][2*j+1] = "."
+        newMap[2*i+1][2*j+1] = "0"
         j += 1
 
     i += 1
@@ -57,7 +57,7 @@ def findFirstPoss(map, current, previous):
     #! Part 2
     x0, y0 = current[0] * 2, current[1] * 2
     newMap[x0][y0] = "S"
-    newMap[x0+1][y0+1] = ""
+    newMap[x0+1][y0+1] = " "
 
     poss = [(0,1),(0,-1),(1,0),(-1,0)]
     pipes = "-7|JLSF"
@@ -106,7 +106,7 @@ def findNext(map, current, previous, tile):
     #! Part 2
     x0, y0 = current[0] * 2, current[1] * 2
     newMap[x0][y0] = tile
-    newMap[x0+1][y0+1] = ""
+    newMap[x0+1][y0+1] = " "
 
     for delta_x,delta_y in poss:
         x,y = i + delta_x, j + delta_y
@@ -182,14 +182,22 @@ print("P1 Answer: ",length/2)
 
 # Part 2 Logic (thanks Robin)
 isInside = 0
-for row in newMap:
+i = 0
+while i < len(newMap):
     countFlats = 0
-    for j in range(0,len(row)):
-        if row[j] == "|":
+    j = 0
+    while j < len(newMap[i]):
+        if newMap[i][j] == "|":
             countFlats += 1
-        if row[j] == "." and countFlats % 2 == 1:
-            row[j] = "I"
-            isInside += 1
+        if newMap[i][j] == "0":
+            newMap[i-1][j-1] = "0"
+            if countFlats % 2 == 1:
+                isInside += 1
+                newMap[i-1][j-1] = "I"
+            newMap[i][j] = " "
+            
+        j += 1
+    i += 1
 print("P2 Answer:",isInside)
 
 #141
@@ -205,7 +213,7 @@ for line in lines:
 newCount = 0
 for line in newMap:
     for x in line:
-        if x == ".":
+        if x == "0":
             newCount+=1
 
 print(oldCount, newCount)
