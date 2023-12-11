@@ -195,6 +195,9 @@ while i < len(newMap):
                 isInside += 1
                 newMap[i-1][j-1] = "I"
             newMap[i][j] = " "
+
+        if newMap[i][j] in "7JFL":
+            newMap[i][j] = "*"
             
         j += 1
     i += 1
@@ -219,4 +222,4 @@ for line in newMap:
 print(oldCount, newCount)
 
 # for x in newMap:
-#     print("\t".join([y for y in x]))
+#     print(" ".join([y for y in x]))
