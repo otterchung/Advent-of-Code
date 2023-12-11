@@ -176,9 +176,11 @@ pathing.append(next)
     
 print('end',tile, previous, next, nextTile)
 
-print(length/2)
+print("P1 Answer: ",length/2)
 
 #p1 - 6812
+
+# Part 2 Logic (thanks Robin)
 isInside = 0
 for row in newMap:
     countFlats = 0
@@ -188,7 +190,7 @@ for row in newMap:
         if row[j] == "." and countFlats % 2 == 1:
             row[j] = "I"
             isInside += 1
-print("ans:",isInside)
+print("P2 Answer:",isInside)
 
 #141
 #451
