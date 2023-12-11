@@ -12,11 +12,9 @@ part1 = False #True
 if "sample" == data:
     print(">>> YOU ARE USING SAMPLE DATA ")
     theFileName = "SampleInput.txt"
-    instr = "LR"
 else:
     print(">>> YOU ARE USING ACTUAL DATA ")
     theFileName = "Input.txt"
-    instr = "LRLRRLLRRLRLRRLLRRLRRLLRRLRRRLRRLRRLRRRLRRLRLRLRLLLRRRLRLLRRLRLRRRLRRLLRRLRRRLRRLRLRLRRRLRLRRRLLRLLRRLRRRLLRRLRLLLRRLRLRLLRRLRLRRRLLRLLRRRLRLLRRRLRRLRRLRRRLRRRLLRLLRRRLRRRLRRLRRRLLRRRLRLRRLLRRLRLRLRRLRRLRLLRRRLRRRLLLRLRLRRRLLRRLRRRLRLRRLLRRLRRLLRLRLRRRLRLRLRLRRRLRLLRRRLRRRLRRLLLRRRR"
 print("...\n\n")
 
 theInput = open(theFileName).read()
@@ -37,16 +35,18 @@ while i < len(lines):
     galRowBool = True
     while j < len(lines[i]):
 
-
+        # find galaxy
         if lines[i][j] == "#":
             nodes.append([i,j])
             galRowBool = False
         j += 1
 
+# finding rows that are expanded
     if galRowBool:
         galRow.append(i)
     i += 1
-    
+
+# finding columns that expanded 
 j = 0
 galCol = []
 while j < len(lines[0]):
@@ -60,10 +60,10 @@ while j < len(lines[0]):
         galCol.append(j)
     j += 1
 
+# find distances between all nodes
 distances = 0
-expand = 1000000-1
+expand = 1000000-1 # expansion changed from p1 to p2
 for node in nodes:
-    
     for node2 in nodes:
         distance = abs(node[0] - node2[0]) + abs(node[1] - node2[1])
 
@@ -83,6 +83,3 @@ for node in nodes:
         distances += distance
 
 print(distances/2)
-
-#271514131521.0
-# 82000210.0
