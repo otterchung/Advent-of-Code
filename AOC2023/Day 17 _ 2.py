@@ -69,7 +69,7 @@ def possibleDir(path):
         if nextNode in valDict[nextNodeVal]:
             # do comparison
             compNode, compValue, compDirection, compAdd = valDict[nextNodeVal][nextNode]
-            if compValue > nextNodeVal or compAdd > nextAdd:
+            if compValue < nextNodeVal or compAdd < nextAdd:
                 valDict[nextNodeVal][nextNode] = nextPath
 
         else:

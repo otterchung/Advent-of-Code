@@ -6,7 +6,7 @@ if "AOC2023" not in os.getcwd():
 print(os.getcwd(), "\n\n...")
 
 data = "sample"
-#data = "actual"
+data = "actual"
 part1 = False #True
 
 if "sample" == data:
@@ -54,6 +54,8 @@ def possibleDir(path):
             nextAdd = sameAdd + 1
             if nextAdd > maxSame:
                 continue
+        if -d[0] == direction[0] and -d[1] == direction[1]:
+            continue
 
         nextNode = (node[0] + d[0], node[1] + d[1])
         nextNodeVal = map[nextNode[0]][nextNode[1]] + value
@@ -73,9 +75,9 @@ def possibleDir(path):
             for compPath in valDict[nextNodeVal][nextNode]:
                 compNode, compValue, compDirection, compAdd = compPath
                 
-                #if compPath != nextPath:
-                    #if compValue > nextNodeVal and compAdd > nextAdd:
-                    #    valDict[nextNodeVal][nextNode] = [nextPath]
+                # if compPath != nextPath:
+                #     if compValue > nextNodeVal and compAdd > nextAdd:
+                #         valDict[nextNodeVal][nextNode] = [nextPath]
                     
                 if nextPath not in valDict[nextNodeVal][nextNode]:
                 #and not (compValue > nextNodeVal and compAdd > nextAdd):
@@ -136,7 +138,3 @@ def explore(map, start, endNode):
         i += 1
 
 hello = explore(map, start, endNode)
-
-print(hello)
-for h in hello:
-    print(h)
