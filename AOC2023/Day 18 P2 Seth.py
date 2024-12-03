@@ -26,8 +26,6 @@ print("First Line: ",lines[0], "\n")
 
 lengthTotals = 0
 areaTotals = 0
-storeRight = []
-storeLeft = []
 
 x = 0
 for line in lines:
