@@ -28,22 +28,20 @@ def checkRow(row):
             first = False
 
         if isIncrease != checkIncrease or abs(difference) > 3 or difference == 0:
-            return i
+            return False
         i += 1
-    return -1
+    return True
 
 total = 0
 for line in yourInput.split("\n"):
     lineVals = [int(x) for x in line.split(" ")]
-    val = checkRow(lineVals)
 
-    if val == -1:
+    if checkRow(lineVals):
         total += 1
     else:
-        newval = None
+        # Part 2 (else block)
         for i in range(0,len(lineVals)):
-            newval = checkRow(lineVals[:i] + lineVals[i+1:])
-            if newval == -1:
+            if checkRow(lineVals[:i] + lineVals[i+1:]):
                 total += 1
                 break
 
