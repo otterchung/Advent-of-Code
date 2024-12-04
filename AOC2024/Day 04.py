@@ -1,3 +1,7 @@
+# Notes:
+# Case's solution for continued direction was nice
+# https://pastebin.com/QKvB50DC
+
 import os
 
 if not 'AOC2024/inputs' in os.getcwd():

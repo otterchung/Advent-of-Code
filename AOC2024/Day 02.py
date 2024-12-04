@@ -16,25 +16,35 @@ yourInput = """7 6 4 2 1
 
 yourInput = newInput
 
-total = 0
-for line in newInput.split("\n"):
-    row = [int(x) for x in line.split(" ")]
-
-    i = 1
+def checkRow(row):
     first = True
     isIncrease = None
-    isSafe = True
-
+    i = 1
     while i < len(row):
         difference = row[i] - row[i-1]
         checkIncrease = difference > 0
         if first:
             isIncrease = difference > 0
             first = False
-        if isIncrease != checkIncrease or abs(difference) > 5 or difference == 0:
-            isSafe = False
-            i = len(row)
+
+        if isIncrease != checkIncrease or abs(difference) > 3 or difference == 0:
+            return i
         i += 1
-    if isSafe:
+    return -1
+
+total = 0
+for line in yourInput.split("\n"):
+    lineVals = [int(x) for x in line.split(" ")]
+    val = checkRow(lineVals)
+
+    if val == -1:
         total += 1
+    else:
+        newval = None
+        for i in range(0,len(lineVals)):
+            newval = checkRow(lineVals[:i] + lineVals[i+1:])
+            if newval == -1:
+                total += 1
+                break
+
 print('Ans:',total)
